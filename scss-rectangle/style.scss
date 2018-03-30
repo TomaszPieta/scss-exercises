@@ -1,0 +1,13 @@
+$baza:20px;
+$bg:green;
+$texty:yellow;
+
+.prostokat{
+  background-color: $bg;
+  padding: $baza;
+  box-shadow: $baza 2*$baza;
+  .tlo{
+    color: $texty;
+    font-size: 3*$baza;
+  }
+}
