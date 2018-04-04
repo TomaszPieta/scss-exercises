@@ -1,0 +1,21 @@
+$size: 1000px;
+$colors: 20;
+$step: 1000deg/$colors;
+
+div{
+  width: $size;
+  height: $size/2;
+  border-top-left-radius: $size*2;
+  border-top-right-radius: $size*2;
+}
+
+@for $i from 1 through $colors{
+  $scale : (1-0.09*$i);
+  div:nth-child(#{$i}){
+    background: adjust-hue(blue, $i*$step);
+    transform: scale($scale, $scale);
+    position: absolute;
+    top: $i*20px;
+    height: ($size/2+5*$i);
+   }  
+}
