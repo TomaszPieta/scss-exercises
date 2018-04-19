@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+
+body{
+  text-align: center;
+  background-color: pink;
+}
+h1{
+  font-family: "Carter One";
+  font-size: 50px;
+  color: blue;
+  text-shadow: 5px 0px 0px white;
+}
+.egg{
+  width: 150px;
+  height: 200px;
+  border-radius: 50%/60% 60% 40% 40%;
+  display: inline-block;
+}
+.left{
+  @extend .egg;
+  background-color: violet;
+  transform: rotate(25deg);
+  animation: ani-left 1s linear infinite alternate;
+}
+.right{
+  @extend .egg;  
+  overflow: hidden;
+  transform: rotate(-25deg);
+  animation: ani-right 1s linear infinite alternate;
+}
+.line{
+  height: 25%;
+}
+.line:nth-child(1){
+  background-color: red;
+}
+.line:nth-child(2){
+  background-color: yellow;
+}
+.line:nth-child(3){
+  background-color: skyblue;
+}
+.line:nth-child(4){
+  background-color: green;
+}
+@keyframes ani-left{
+  0% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes ani-right{
+  0% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
