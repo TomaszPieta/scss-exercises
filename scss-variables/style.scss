@@ -13,3 +13,17 @@ $desktop: "only screen and (max-width: 960px)";
     background: red;
   }
 }
+/////////
+@mixin button($width, $height, $background, $color, $border-radius) {
+  width: $width;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  background: $background;
+  color: $color;
+  border-radius: $border-radius;
+}
+
+button {
+  @include button(150px, 50px, #000, #fff, 8px); 
+}
