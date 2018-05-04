@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: silver;
+}
+
+$mega: "only screen and (max-width: 2000px)";
+$big: "only screen and (max-width: 1500px)";
+$desktop: "only screen and (max-width: 1200px)";
+$medium: "only screen and (max-width:1000px)";
+$tablet: "only screen and (max-width: 768px)";
+$mobile: "only screen and (max-width: 640px)";
+$mini: "only screen and (max-width: 480px)";
+$bg: "background-color";
+$gtc: "grid-template-columns";
+$gtr: "grid-template-rows";
+
+.nav{
+  width: 50vw;
+  transform: translateX(50%) translateY(50%);
+  display: grid;
+  #{$gtc}: repeat(4, 1fr);
+  
+  @media #{$mega}{
+      #{$bg}: silver;
+    }
+    @media #{$big}{
+      #{$bg}: green;
+    }
+    @media #{$desktop}{
+      #{$bg}: blue;
+    }
+    @media #{$medium}{
+      #{$bg}: purple;
+    }
+    @media #{$tablet}{
+      #{$bg}: red;
+    }
+    @media #{$mobile}{
+      #{$bg}: yellow;
+      visibility: hidden;
+    }
+    @media #{$mini}{
+      #{$bg}: pink;
+      visibility: hidden;
+    }
+  
+}
+.container{
+  width: 50vw; height: 50vh;
+  transform: translateX(50%) translateY(50%);
+}
+  .grid{
+    display: grid;
+        
+    @media #{$mega}{
+      #{$bg}: silver;
+      #{$gtc}: repeat(4, 1fr);
+    }
+    @media #{$big}{
+      #{$bg}: green;
+      #{$gtc}: repeat(4, 1fr);
+    }
+    @media #{$desktop}{
+      #{$bg}: blue;
+      #{$gtc}: repeat(3, 1fr);
+    }
+    @media #{$medium}{
+      #{$bg}: purple;
+      #{$gtc}: repeat(3, 1fr);
+    }
+    @media #{$tablet}{
+      #{$bg}: red;
+      #{$gtc}: repeat(2, 1fr);
+    }
+    @media #{$mobile}{
+      #{$bg}: yellow;
+      #{$gtc}: repeat(2, 1fr);
+    }
+    @media #{$mini}{
+      #{$bg}: pink;
+      #{$gtc}: repeat(1, 1fr);
+    }
+}
+.box, .nava{
+  #{$bg}: transparent;
+  padding: 10px;
+  border: 3px solid black;
+  text-align: center;
+  font: 20px;
+  font-weight: bold;  
+}
+.one:hover{
+  #{$bg}: red;
+}
+.two:hover{
+  #{$bg}: yellow;
+}
+.three:hover{
+  #{$bg}: blue;
+}
+.four:hover{
+  #{$bg}: silver;
+}
+.five:hover{
+  #{$bg}: teal;
+}
+.six:hover{
+  #{$bg}: violet;
+}
+.seven:hover{
+  #{$bg}: orange;
+}
+.eight:hover{
+  #{$bg}: white;
+}
